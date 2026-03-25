@@ -1,4 +1,4 @@
-# BlogSpot - Django Blog Website
+# TypeWave - Django Blog Website
 
 A full-stack blog web application built with Django. Users can register, sign in, create blog posts with images, edit or delete their posts, and interact through comments.
 

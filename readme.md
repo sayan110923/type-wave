@@ -1,63 +1,92 @@
-<div align="center">
+# BlogSpot - Django Blog Website
 
-  <h1 align="center">Python Django Blog Website</h1>
+A full-stack blog web application built with Django. Users can register, sign in, create blog posts with images, edit or delete their posts, and interact through comments.
 
+## Features
 
-A Blog application in Django contains all the features of a Blog site like login/register into the system, add blog post with title, description and image and edit or delete the blog post.
+- User authentication (signup, signin, profile)
+- Create, read, update, and delete blog posts
+- Image upload for blog posts
+- Comment support on posts
+- Contact form
+- Responsive frontend using HTML, CSS, Bootstrap, and JavaScript
 
+## Tech Stack
 
-  <a href="https://blogs-n2mq.onrender.com/"><strong>➥ Live Demo</strong></a>
+- Python
+- Django
+- SQLite
+- HTML/CSS/JavaScript
+- Bootstrap
 
-</div>
+## Project Structure
 
-<br />
+- myproject: Django project configuration
+- myapp: Main app with models, views, urls, and migrations
+- templates: HTML templates
+- static: CSS, JS, fonts, and vendor assets
+- media: Uploaded images
 
-## 📃 Description
+## Requirements
 
+- Python 3.10+ (recommended)
+- pip
 
-Creating A Blog In Django has interactive UI design using which users can see what others are posting. It also has an admin panel through which all the blog posts and users can be managed.
+Dependencies are listed in requirements.txt.
 
-<br>
-<br>
+## Installation
 
-![1](PREVIEW/IMG1.png)
-![2](PREVIEW/IMG2.png)
-![3](PREVIEW/IMG3.png)
-![4](PREVIEW/IMG4.png)
-![5](PREVIEW/IMG5.png)
-<br>
+1. Open terminal in the project folder.
+2. Create a virtual environment:
 
+```powershell
+python -m venv .venv
+```
 
-## Features 
+3. Activate virtual environment (Windows PowerShell):
 
-- **Manage Blog** :– In this feature includes the CRUD operation in a blog or content you create like adding, editing and deleting content of the blog
-- **Login System** :- In this feature the admin can login to the system and manage all the feature of the system.
-- **Blog** :- In this method which is the main method of the system.
-- **Media** :- In this method which you can found all the media that you are upload in the system.
-- **Template** :- In this method which is the design of the system that consist of HTML,CSS and JavaScript.
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
 
+4. Install dependencies:
 
+```powershell
+pip install -r requirements.txt
+```
 
-## 🚀 Setup/Installation Requirements
+5. Apply migrations:
 
-To view the website, 
-* click [Python Django Blog Website](https://github.com/keerti1924/Python-Django-Blog-Website.git)
-or 
-* copy the link https://github.com/keerti1924/Python-Django-Blog-Website.git paste it to your browser and load it.  
+```powershell
+python manage.py migrate
+```
 
-## 🛠 Built With
+6. Start development server:
 
-* HTML
-* CSS
-* JAVASCRIPT
-* PYTHON
-* DJANGO
-* DATABASE 
+```powershell
+python manage.py runserver
+```
 
-The system is built fully in Django Framework in back-end and HTML, CSS in front-end. It has full-featured user interface with all the functionalities
+7. Open in browser:
 
+http://127.0.0.1:8000/
 
-## ⭐️ Show your support 
+## Optional Admin Setup
 
-Give a ⭐️ if you like this project!
+Create admin user:
 
+```powershell
+python manage.py createsuperuser
+```
+
+Admin panel URL:
+
+http://127.0.0.1:8000/admin/
+
+## Current Branding Links
+
+- LinkedIn: https://www.linkedin.com/in/sayan-koley/
+
+## License
+
+This project is for educational and personal use.

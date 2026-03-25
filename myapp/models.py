@@ -2,8 +2,10 @@ from django.db import models
 from django.contrib.auth.models import User
 from datetime import datetime  
 
-now =  datetime.now()
-time = now.strftime("%d %B %Y")
+def current_date_str():
+    return datetime.now().strftime("%d %B %Y")
+
+
 # Create your models here.
 
 
@@ -12,7 +14,7 @@ class Post(models.Model):
     category = models.CharField(max_length=600)
     image = models.ImageField(upload_to='images/posts',blank=True,null=True)
     content = models.CharField(max_length=100000)
-    time = models.CharField(default=time,max_length=100, blank=True)
+    time = models.CharField(default=current_date_str,max_length=100, blank=True)
     likes = models.IntegerField(null=True,blank=True,default=0)
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     
@@ -22,7 +24,7 @@ class Post(models.Model):
     
 class Comment(models.Model):
     content = models.CharField(max_length=200)
-    time = models.CharField(default=time,max_length=100, blank=True)
+    time = models.CharField(default=current_date_str,max_length=100, blank=True)
     post = models.ForeignKey(Post,on_delete=models.CASCADE)
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     def __str__(self):
